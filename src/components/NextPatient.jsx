@@ -2,7 +2,7 @@
 import { AiOutlineClockCircle } from 'react-icons/ai';
 import { FaUserAlt, FaVideo } from 'react-icons/fa';
 
-const NextPatient = ({ upcomingAppointments, icon, onStartVideo }) => {
+const NextPatient = ({ upcomingAppointments, icon, onStartVideo,isCallActive }) => {
   const formatTime = (dateString) => {
     const options = { hour: '2-digit', minute: '2-digit' };
     return new Date(dateString).toLocaleString('en-US', options);
@@ -39,8 +39,23 @@ const NextPatient = ({ upcomingAppointments, icon, onStartVideo }) => {
                   </p>
                 </div>
               </div>
-              
               {onStartVideo && (
+        <button
+        onClick={() => !isCallActive && onStartVideo(upcomingAppointments[0])}
+         className={`flex items-center px-3 py-1 rounded-md transition-colors ${
+         isCallActive 
+        ? 'bg-gray-400 cursor-not-allowed' 
+        : 'bg-blue-900 text-white hover:bg-blue-800'
+         }`}
+         disabled={isCallActive}
+       aria-label={isCallActive ? 'Call in progress' : 'Start video call'}
+      >
+    <FaVideo className="mr-2" />
+    {isCallActive ? 'Call in Progress' : 'Start Video'}
+      </button>
+     )}
+              
+              {/* {onStartVideo && (
                 <button
                   onClick={() => onStartVideo(upcomingAppointments[0])}
                   className="flex items-center px-3 py-1 bg-blue-900 text-white rounded-md hover:bg-blue-800 transition-colors"
@@ -49,7 +64,7 @@ const NextPatient = ({ upcomingAppointments, icon, onStartVideo }) => {
                   <FaVideo className="mr-2" />
                   Start Video
                 </button>
-              )}
+              )} */}
             </div>
             
             <div className="space-y-2 pl-11">

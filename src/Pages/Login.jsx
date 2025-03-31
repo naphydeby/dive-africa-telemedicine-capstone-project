@@ -106,7 +106,7 @@ const Login = () => {
         setError("User data not found. Please sign up.");
       }
     } catch (error) {
-      setError('Network Request Failed'); // Set error message for the user
+      setError('Invalid Credential'); // Set error message for the user
       console.error("Error logging in:", error.message);
     } finally {
       setLoading(false); // Stop loading

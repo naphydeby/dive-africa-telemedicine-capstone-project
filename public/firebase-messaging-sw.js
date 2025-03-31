@@ -1,17 +1,19 @@
-// public/firebase-messaging-sw.js  Notification use
+
 importScripts("https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js");
 importScripts("https://www.gstatic.com/firebasejs/9.6.1/firebase-messaging-compat.js");
 
+// This will be replaced during build by Vite
 const firebaseConfig = {
-  apiKey: "AIzaSyBBNVu_XNWUhtWSdogITTmYdI_Ttbv4qKU",
-  authDomain: "telemedix-cec11.firebaseapp.com",
-  projectId: "telemedix-cec11",
-  storageBucket: "telemedix-cec11.firebasestorage.app",
-  messagingSenderId: "616521962183",
-  appId: "1:616521962183:web:fe284c253aa7cf9adca4e2",
+  apiKey: "injected-by-vite",
+  authDomain: "injected-by-vite",
+  projectId: "injected-by-vite",
+  storageBucket: "injected-by-vite",
+  messagingSenderId: "injected-by-vite",
+  appId: "injected-by-vite"
 };
 
-firebase.initializeApp(firebaseConfig);
+// Initialize Firebase
+const app = firebase.initializeApp(firebaseConfig);
 const messaging = firebase.messaging();
 
 messaging.onBackgroundMessage((payload) => {

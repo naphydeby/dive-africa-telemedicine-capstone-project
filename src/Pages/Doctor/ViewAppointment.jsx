@@ -54,7 +54,7 @@ const ViewAppointment = () => {
         
         querySnapshot.forEach((doc) => {
           const appointment = { id: doc.id, ...doc.data() };
-          // Convert Firestore Timestamp to Date if needed
+          
           if (appointment.timestamp?.toDate) {
             appointment.dateTime = appointment.timestamp.toDate();
           }
@@ -165,7 +165,7 @@ const ViewAppointment = () => {
             </p>
           </div>
           
-          <div className="inline-flex rounded-md shadow-sm mt-4 md:mt-0" role="group">
+          <div className="inline-flex rounded-md shadow-sm mt-4 md:mt-0" role="patient">
             <button
               onClick={() => setFilter("upcoming")}
               className={`px-4 py-2 text-sm font-medium rounded-l-lg ${

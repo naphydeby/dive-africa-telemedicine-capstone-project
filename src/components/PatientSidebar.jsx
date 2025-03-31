@@ -46,10 +46,10 @@ const PatientSidebar = () => {
   useEffect(() => {
     if (!user) return;
     
-    // Fetch patient data instead of doctor data
+    // Fetch patient data
     const fetchPatientData = async () => {
       try {
-        const docRef = doc(db, 'patients', user.uid);
+        const docRef = doc(db, 'users', user.uid);
         const docSnap = await getDoc(docRef);
         if (docSnap.exists()) {
           setPatientData(docSnap.data());

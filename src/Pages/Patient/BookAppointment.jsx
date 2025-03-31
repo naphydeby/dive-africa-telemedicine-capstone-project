@@ -147,11 +147,11 @@ const BookAppointment = () => {
               value={formData.doctorName}
               onChange={handleInputChange}
               onFocus={() => setIsDoctorListOpen(true)}
-              className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-700 focus:border-transparent"
+              className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-700 focus:border-transparent"
               required
             />
             {isDoctorListOpen && (
-              <div className="absolute z-10 mt-1 w-full bg-white border border-gray-300 rounded-lg shadow-lg max-h-60 overflow-auto">
+              <div className="absolute z-10 mt-1 w-full bg-white border border-gray-300 rounded-lg focus:outline-none shadow-lg max-h-60 overflow-auto custom-scrollbar">
                 {doctors.map(doctor => (
                   <div
                     key={doctor.id}
@@ -190,7 +190,7 @@ const BookAppointment = () => {
                 value={formData.date}
                 onChange={handleInputChange}
                 min={new Date().toISOString().split('T')[0]}
-                className="w-full pl-10 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                className="w-full pl-10 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
                 required
               />
             </div>
@@ -209,7 +209,7 @@ const BookAppointment = () => {
                 name="time"
                 value={formData.time}
                 onChange={handleInputChange}
-                className="w-full pl-10 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                className="w-full pl-10 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
                 required
               />
             </div>
@@ -227,7 +227,7 @@ const BookAppointment = () => {
             value={formData.notes}
             onChange={handleInputChange}
             rows={3}
-            className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+            className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
           />
         </div>
 

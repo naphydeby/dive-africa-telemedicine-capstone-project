@@ -119,9 +119,9 @@ const PatientMessage = () => {
  
   return (
     
-    <div className="min-h-screen flex bg-gradient-to-r from-blue-250 to-purple-50 p-5">
+    <div className="min-h-screen flex bg-gradient-to-r from-blue-250 to-purple-50  ">
     <PatientSidebar/>
-      <div className="w-full lg:w-3/4 p-5 mt-8 lg:mt-0 bg-white rounded-lg shadow-lg overflow-hidden">
+      <div className="w-full lg:w-3/4 p-5 mt-8 lg:mt-0 lg:ml-4 bg-white rounded-lg  shadow-lg overflow-hidden  ">
         {/* Header */}
         <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-6">
           <h2 className="text-2xl font-bold text-white">Messages</h2>
@@ -132,7 +132,8 @@ const PatientMessage = () => {
           <select
             value={selectedDoctorId}
             onChange={(e) => setSelectedDoctorId(e.target.value)}
-            className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent
+            overflow-y-auto  custom-scrollbar"
             aria-label="Select a doctor"
             required
           >
@@ -146,7 +147,7 @@ const PatientMessage = () => {
         </div>
 
         {/* Messages Container */}
-        <div className="p-6 h-[400px] overflow-y-auto">
+        <div className="p-6 h-[400px] overflow-y-auto custom-scrollbar">
           {messages.length === 0 && !loadingMessages && (
             <p className="text-gray-500 text-center">No messages yet. Start the conversation!</p>
           )}

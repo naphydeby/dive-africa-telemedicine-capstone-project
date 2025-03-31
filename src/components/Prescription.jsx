@@ -68,7 +68,7 @@ const Prescription = ({ prescriptions,icon }) => {
               type="text"
               value={newPrescription.patientId}
               onChange={(e) => setNewPrescription(prev => ({ ...prev, patientId: e.target.value }))}
-              className="w-full p-2 border border-blue-900 rounded"
+              className="w-full p-2 border border-blue-900 rounded focus:outline-none"
               required
             />
           </div>
@@ -82,7 +82,7 @@ const Prescription = ({ prescriptions,icon }) => {
                   placeholder="Medicine name"
                   value={medicine.name}
                   onChange={(e) => handleMedicineChange(index, 'name', e.target.value)}
-                  className="w-[50%] p-2 border border-blue-900 rounded"
+                  className="w-[50%] p-2 border border-blue-900 rounded focus:outline-none"
                   required
                 />
                 <input
@@ -90,7 +90,7 @@ const Prescription = ({ prescriptions,icon }) => {
                   placeholder="Dosage"
                   value={medicine.dosage}
                   onChange={(e) => handleMedicineChange(index, 'dosage', e.target.value)}
-                  className="w-[50%] p-2 border border-blue-900 rounded"
+                  className="w-[50%] p-2 border border-blue-900 rounded focus:outline-none"
                   required
                 />
               </div>
@@ -109,7 +109,7 @@ const Prescription = ({ prescriptions,icon }) => {
             <textarea
               value={newPrescription.instructions}
               onChange={(e) => setNewPrescription(prev => ({ ...prev, instructions: e.target.value }))}
-              className="w-full p-2 border border-blue-900 rounded"
+              className="w-full p-2 border border-blue-900 rounded focus:outline-none"
               rows="3"
             />
           </div>

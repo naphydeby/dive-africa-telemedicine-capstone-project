@@ -116,7 +116,7 @@ const MedicalReport = () => {
               value={newRecord.patientId}
               onChange={(e) => setNewRecord({ ...newRecord, patientId: e.target.value })}
               required
-              className="w-full p-2 border border-gray-300 rounded"
+              className="w-full p-2 border border-gray-300 rounded focus:outline-none"
             />
             <input
               type="text"
@@ -124,7 +124,7 @@ const MedicalReport = () => {
               value={newRecord.patientName}
               onChange={(e) => setNewRecord({ ...newRecord, patientName: e.target.value })}
               required
-              className="w-full p-2 border border-gray-300 rounded"
+              className="w-full p-2 border border-gray-300 rounded focus:outline-none"
             />
             <input
               type="date"
@@ -132,14 +132,14 @@ const MedicalReport = () => {
               value={newRecord.date}
               onChange={(e) => setNewRecord({ ...newRecord, date: e.target.value })}
               required
-              className="w-full p-2 border border-gray-300 rounded"
+              className="w-full p-2 border border-gray-300 rounded focus:outline-none"
             />
             <textarea
               placeholder="Description"
               value={newRecord.description}
               onChange={(e) => setNewRecord({ ...newRecord, description: e.target.value })}
               required
-              className="w-full p-2 border border-gray-300 rounded"
+              className="w-full p-2 border border-gray-300 rounded focus:outline-none"
             />
             <input
               type="text"
@@ -147,7 +147,7 @@ const MedicalReport = () => {
               value={newRecord.doctorName}
               onChange={(e) => setNewRecord({ ...newRecord, doctorName: e.target.value })}
               required
-              className="w-full p-2 border border-gray-300 rounded"
+              className="w-full p-2 border border-gray-300 rounded focus:outline-none"
             />
             <button
               type="submit"
