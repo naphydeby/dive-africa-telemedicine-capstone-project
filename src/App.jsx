@@ -1,8 +1,8 @@
 
 
 import React from 'react'
-// hashRouter used Instead of BrowserRouter because of my deployment to vercel and github page
-import { HashRouter,Routes, Route } from 'react-router-dom';   
+
+import { BrowserRouter,Routes, Route } from 'react-router-dom';   
 import Login from "./Pages/Login";
 import Signup from "./Pages/Signup"
 import DoctorDashboard from './Pages/Doctor/DoctorDashboard';
@@ -23,10 +23,10 @@ import NotFountPage from './Pages/NotFountPage'
 
 const App = () => {
   return (
-    <HashRouter>
+    <BrowserRouter>
     <Routes>
       {/* Public Routes */}
-      <Route path="/login" element={<Login />} />
+      <Route path="/" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
 
       {/* Protected Routes for Doctors */}
@@ -130,10 +130,10 @@ const App = () => {
         }
       />
   <Route path="*" element={<NotFountPage/>} />
-      {/* Default Route (Optional) */}
-      <Route path="/" element={<Login />} />
+      
+      
     </Routes>
-  </HashRouter>
+  </BrowserRouter>
 
   
   )
