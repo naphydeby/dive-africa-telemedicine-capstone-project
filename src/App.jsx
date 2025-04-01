@@ -131,7 +131,7 @@ const App = () => {
       />
   <Route path="*" element={<NotFountPage/>} />
       
-      
+  <Route path="/" element={<Login/>} />
     </Routes>
   </BrowserRouter>
 
