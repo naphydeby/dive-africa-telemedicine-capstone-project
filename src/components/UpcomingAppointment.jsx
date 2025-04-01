@@ -45,7 +45,7 @@ const UpcomingAppointments = ({ appointments, onReschedule, onCancel, onStartVid
           key={appointment.id} 
           className="border border-blue-900 rounded-lg p-3 hover:shadow-md transition-shadow"
            >
-           <div className="flex flex-col md:flex-col lg:flex-row justify-between items-start">
+           <div className="flex flex-col space-y-2  justify-between items-start">
            <div>
            <h4 className="font-medium text-lg">
             {appointment.doctorName}

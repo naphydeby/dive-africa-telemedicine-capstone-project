@@ -4,12 +4,12 @@ importScripts("https://www.gstatic.com/firebasejs/9.6.1/firebase-messaging-compa
 
 // This will be replaced during build by Vite
 const firebaseConfig = {
-  apiKey: "injected-by-vite",
-  authDomain: "injected-by-vite",
-  projectId: "injected-by-vite",
-  storageBucket: "injected-by-vite",
-  messagingSenderId: "injected-by-vite",
-  appId: "injected-by-vite"
+  apiKey: "IzaSyBBNVu_XNWUhtWSdogITTmYdI_Ttbv4qKU",
+  authDomain: "telemedix-cec11.firebaseapp.com",
+  projectId: "telemedix-cec11",
+  storageBucket: "telemedix-cec11.appspot.com",
+  messagingSenderId: "616521962183",
+  appId: "1:616521962183:web:fe284c253aa7cf9adca4e2"
 };
 
 // Initialize Firebase

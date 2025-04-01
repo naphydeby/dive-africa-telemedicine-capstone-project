@@ -25,7 +25,7 @@ const NextPatient = ({ upcomingAppointments, icon, onStartVideo,isCallActive }) 
       ) : (
         <div className="border border-blue-900 rounded-lg p-3 hover:shadow-md transition-shadow">
           <div className="flex flex-col">
-            <div className="flex justify-between items-start mb-2">
+            <div className="flex flex-col items-start mb-2">
               <div className="flex items-center">
                 <div className="bg-blue-100 p-2 rounded-full mr-3">
                   <FaUserAlt className="text-blue-900" />
